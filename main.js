@@ -105,7 +105,26 @@ contactForm.addEventListener('submit', (e) => {
   const subject = document.getElementById('subject').value;
   const message = document.getElementById('message').value;
 
-  alert(`Thank you, ${name}! Your message has been received. I'll get back to you soon!`);
+  const formData = new FormData();
+  formData.append('name', name);
+  formData.append('email', email);
+  formData.append('subject', subject);
+  formData.append('message', message);
 
-  contactForm.reset();
+  fetch('https://formspree.io/f/mqedgogd', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      alert(`Thank you, ${name}! Your message has been sent successfully. I'll get back to you soon!`);
+      contactForm.reset();
+    } else {
+      alert('There was an error sending your message. Please try again.');
+    }
+  })
+  .catch(error => {
+    alert('There was an error sending your message. Please try again.');
+    console.error('Error:', error);
+  });
 });
