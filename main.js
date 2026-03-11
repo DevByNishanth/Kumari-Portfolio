@@ -50,7 +50,7 @@ ctaButton.addEventListener("click", () => {
 });
 
 const texts = [
-  "Java Full Stack Developer",
+  "Python Full Stack Developer",
   "Backend Developer",
   "Frontend Developer",
   "Problem Solver",
