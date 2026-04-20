@@ -495,7 +495,7 @@ body {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, var(--color-primary), #00b4d8, var(--color-primary));
+  background: linear-gradient(45deg, var(--color-primary), #00b4d833, var(--color-primary));
   border-radius: var(--border-radius);
   opacity: 0;
   z-index: -1;
@@ -508,7 +508,7 @@ body {
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(13, 211, 216, 0.3);
+  box-shadow: 0 20px 60px rgba(13, 213, 216, 0);
 }
 
 .project-content h3 {
